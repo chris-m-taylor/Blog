@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>The Chris Taylor Project Blog</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-6.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Chris' Blog</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >			
+					
+					<div class="bio mb-3">Hi, my name is Chris Taylor. I am a computer science student at the College of Charleston.<br><a href="about.html">Find out more about me</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item">
+					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					</li>
+					<!-- <li class="nav-item active">
+					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
+					</li> -->
+					<li class="nav-item">
+					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+					</li>
+				</ul>
+				
+				<div class="my-2 my-md-3">
+					
+				    <a class="btn btn-primary" href="#" >Get in Touch</a>
+				    
+				</div>
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+					<!-- TITLE -->
+					<h2 class="title mb-2">Availability, Reliability, and Safety</h2>
+					<div class="meta mb-3"><span class="comment">HW3: Chapters 11 & 12</span><span class="date">Published September 4th, 2020</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+					
+
+					<h4 class="mt-5 mb-3">11.4 What is the common characteristic of all architectural styles that are geared to supporting software fault tolerance?</h4>
+					<p>They either deal with availability or reliability problems which mean they need a high amount of redundancy and diversity. A system that is supporting fault tolerance needs to have multiple systems that output the same thing. These multiple systems, however, need to be programmed in different ways, and/or use different hardware in each system. This is to allow the output to be checked with different systems that should produce the same output.</p>
+					<p>A good analogy would be if you had a math problem that you didn’t know how to solve. You can either take it to one of your friends and have him solve the same problem 3 times and compare his three answers. Or you can take it to three different friends, and if 2 of them have the same answer, you can assume that the answer is correct.</p>
+					<p>This is the importance of not only have redundancy in your system, but also diversity.</p>
+
+
+					<h4 class="mt-5 mb-3">11.7 It has been suggested that the control software for a radiation therapy machine, used to treat patients with cancer, should be implemented using N-version programming. Comment on whether or not you think this is a good suggestion.</h4>
+					<p>First, let’s define what N-version programming is. N-version programming is a type of system that has multiple self-monitoring programs, or multiple pieces of hardware with the same or different program, running at the same time. If an input is passed in, it would be sent through the three different programs/hardware and then the output would be compared. </p>
+					<p>This level of fault tolerance is more expensive than just having one system and solving errors as they arise. Since the system will be dealing with radiation therapy, the machine must have a high level of reliability. N-version programming would be worth it in this case since the stakes are much higher than a system that does not involve the lives of humans.</p>
+
+
+					<h4 class="mt-5 mb-3">11.9 Explain why you should explicitly handle all exceptions in a system that is intended to have a high level of availability.</h4>
+					<p>Explicitly handling all exceptions will allow the system to continue running even if an error occurs. Instead of the error stopping the program completely, we can catch the error at a lower level and handle it, so it does not get passed further along the chain. </p>
+					<p>Unfortunately, the more exceptions that are account for, the more expensive the software becomes. There is an exponential curve where the cost per error detected rises as the number of errors remaining decreases.</p>
+					<p>Now, if the budget is there, the more exceptions you are able to process will greatly reduce the chances of the system crashing or becoming unavailable. </p>
+					
+					
+					<h4 class="mt-5 mb-2">12.5 A train protection system automatically applies the brakes of a train if the speed limit for a segment of track is exceeded, or if the train enters a track segment that is currently signaled with a red light (i.e., the segment should not be entered). There are two critical-safety requirements for this train protection system:</h4>
+					<h5 class="mt-4">The train shall not enter a segment of track that is signaled with a red light.</h5>
+					<h5 class="mb-3">The train shall not exceed the specified speed limit for a section of track.</h5>
+					<h5 class="mb-3 mt-4">Assuming that the signal status and the speed limit for the track segment are transmitted to on-board software on the train before it enters the track segment, propose five possible functional system requirements for the onboard software that may be generated from the system safety requirements.</h5>
+					<p>It is important to have a good hazard detection and removal system in place when dealing with situations and can cause injury or death. Five possible functional system requirements for the system above are as follows:</p>
+					<ul>
+						<li>The system will measure the speed limit the train is going as well as the speed limit set for the track it is on.</li>
+						<li>The system shall deliver an alarm to the train operator BEFORE the speed limit is exceeded.</li>
+						<li>The system will not disengage the brakes if they were activated by reaching one of the above potential risks</li>
+						<li>The system will measure the distance between the front of the train and any red-light zones it might approach.</li>
+						<li>The system shall deliver an alarm to the train operator if they are approaching a track that is currently signals with a red light.</li>
+					</ul>
+				    
+				   
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+
+				</nav>
+				
+				
+		    </div><!--//container-->
+	    </article>
+	    
+	    
+	    <footer class="footer text-center py-2 theme-bg-dark">
+		   
+	        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+                <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+		   
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+    
+
+    
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script>
+    
+ 
+    
+
+</body>
+</html> 
+
