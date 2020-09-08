@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>The Chris Taylor Project Blog</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-6.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Chris' Blog</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >			
+					
+					<div class="bio mb-3">Hi, my name is Chris Taylor. I am a computer science student at the College of Charleston.<br><a href="about.html">Find out more about me</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item">
+					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					</li>
+					<!-- <li class="nav-item active">
+					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
+					</li> -->
+					<li class="nav-item">
+					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+					</li>
+				</ul>
+				
+				<div class="my-2 my-md-3">
+					
+				    <a class="btn btn-primary" href="#" >Get in Touch</a>
+				    
+				</div>
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+					<!-- TITLE -->
+					<h2 class="title mb-2">Reflections on Software Failure</h2>
+					<div class="meta mb-3"><span class="comment">HW4: Reflections on software failure</span><span class="date">Published September 7th, 2020</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+					
+
+					<p>After reading over the articles on the failures of software it is clear that the common theme behind them is TEST! TEST! TEST! The articles span a wide variety of topics such as healthcare overdoses, space travel, and FBI fiascos. Most, if not all, of the different failures could have been helped with proper software engineering practices surrounding testing and understanding of core functionality. One thing I have learned in my software engineering class this far, is that testing is not something you do, but something you live. After looking at these different articles, maybe it will help a reader like yourself to see the impact proper testing and understanding can have.</p>
+					<p>“a technical innovation that significantly reduces radiation dose.” This is taken from a CT scanner manual talking about a feature that allows for auto calculation for the levels of radiation based on the physical attributes of the patient. This feature works great until the technician also sets the image clarity higher, increasing the radiation, sometimes by 10x the original amount, and completely ignoring the automatic levels. The software engineers neglected to see a use case where a technician would perform these actions in this order and it unfortunately caused harm to many patients. Based on chapter 14 talking about resilience engineering, if the company designing the software did not have time to fully implement AND TEST a feature rigorously, they should leave it to the technician to specify the levels of radiation.</p>
+					<p>There are other cases of medical equipment malfunctions such as the Therac-25, which is another radiation device that caused massive overdoses of radiation to patients. Many pieces of medical hardware are built by small companies that are not strictly overseen by an organization that develops standards. Because of this, it is that much more important for proper testing to be done. In the case of the Therac-25, the combination of hardware and software was never fully tested until it was being assembled at the hospital. This is yet another example of inadequate and lazy testing on the side of the software engineers. Also, if the engineers were to understand, at a deep level, what radiation is and how to properly use it, they might have been able to safeguard the systems better.</p>
+					<p>Improper testing can be a byproduct of misunderstanding. If a software engineer does not completely understand the problem they are addressing, how will they ever design proper tests? In the case of a series of spacecraft incidents, it seems a key part in their failure was due to misunderstanding of the software they were creating. Also, while the FBI was migrating from their old system of record keeping to their new system, miscommunication was at the root of all problems. There were two different redesigns and hundreds of millions of dollars wasted. In an FBI public announcement of car technologies, they found that new cars being created had vulnerabilities the manufactures had not caught. Had the manufactures understood that cars are no longer disconnected from new technologies, this might have been avoided. Understanding the software is just as important if not more important than creating it.</p>
+					<p>Communication and testing are two very important parts of software engineering and designing any new system. The article Why Software Projects Fail says, “Testing should also be carried out throughout the entire development lifecycle, with each component tested as it is completed. Naturally, you will also need to allot adequate time.” It is important to not only test to make sure the functions are working correctly, but also that the end user is understanding and will be able to use your product. This will help any software engineer understand what they are creating since they will have more interaction with the end user. Unfortunately, “When there’s a lot of pressure to deliver on a project at a certain time, testing is typically the first thing to be abandoned.” This is also taken from Why Software Projects Fail. Being able to test correctly comes from an understanding of the product, and an understanding of the product comes from a back and forth dialogue between the user and designer, testing at every step.</p>
+				    
+				   
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+
+				</nav>
+				
+				
+		    </div><!--//container-->
+	    </article>
+	    
+	    
+	    <footer class="footer text-center py-2 theme-bg-dark">
+		   
+	        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+                <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+		   
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+    
+
+    
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script>
+    
+ 
+    
+
+</body>
+</html> 
+
