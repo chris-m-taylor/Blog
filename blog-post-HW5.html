@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>The Chris Taylor Project Blog</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-6.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Chris' Blog</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >			
+					
+					<div class="bio mb-3">Hi, my name is Chris Taylor. I am a computer science student at the College of Charleston.<br><a href="about.html">Find out more about me</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item">
+					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					</li>
+					<!-- <li class="nav-item active">
+					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
+					</li> -->
+					<li class="nav-item">
+					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+					</li>
+				</ul>
+				
+				<div class="my-2 my-md-3">
+					
+				    <a class="btn btn-primary" href="#" >Get in Touch</a>
+				    
+				</div>
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+					<!-- TITLE -->
+					<h2 class="title mb-2">Reflections on Testing</h2>
+					<div class="meta mb-3"><span class="comment">HW5: Chapter 4 and reflections</span><span class="date">Published September 10th, 2020</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+					
+
+					<h4 class="mt-5 mb-3">4.5) Using the technique suggested here, where natural language descriptions are presented in a standard format, write plausible user requirements for the following functions:</h4>
+					<h5 class="mt-4">An unattended gas pump system that includes a credit card reader. The customer swipes the card through the reader, then specifies the amount of fuel required. The fuel is delivered, and the customer's account debited.</h5>
+					<ul>
+						<li>The user will be able to choose either debit or credit</li>
+						<li>If the user chooses debit, the system will ask for a pin number, if the user chooses credit, the system will ask for a zip code.</li>
+						<li>There will be a $1.00 charge to the card to make sure the card is active before allowing for fuel to be delivered.</li>
+						<li>After fuel is delivered the $1.00 charge is refunded and the total amount of gas will be charged to the account.</li>
+					</ul>
+
+					<h5 class="mt-4">The cash-dispensing function in a bank ATM.</h5>
+					<ul>
+						<li>The user will be able to insert their card to see their account information.</li>
+						<li>The user will not be allowed to remove the cash dispensed until their card is removed.</li>
+						<li>The ATM will dispense bills of size 20 only.</li>
+					</ul>
+
+
+					<h5 class="mt-4">In an internet banking system, a facility that allows customers to transfer funds from one account held with the bank to another account with the same bank.</h5>
+					<ul>
+						<li>The user must specify the day they want their money to be sent.</li>
+						<li>The user must specify an amount and account they want to withdraw or deposit to.</li>
+						<li>The system will check for available funds based on the amount the user specified.</li>
+						<li>The money will be taken from users account immediately even if the funds to not transfer immediately.</li>
+					</ul>
+
+					<h4 class="mt-5 mb-3">4.6) Suggest how an engineer responsible for drawing up a system requirements specification might keep track of the relationships between functional and non-functional requirements.</h4>
+					<p>A non-functional requirement is a constraint on the system as a whole while a functional requirement is how the system should react to certain inputs and how it will behave in different situations. An engineer may create a system requirements document that spells out what the system will accomplish at a high level in the different aspects of the project. A programmer will then take those requirements and expand upon the implementation in order to translate them to a coding language.</p>
+					
+					<h4 class="mt-5 mb-3">4.7) Using your knowledge of how an ATM is used, develop a set of use cases that could serve as a basis for understanding the requirements for an ATM system.</h4>
+					<p><strong>Use case for checking balance:</strong>  The user approaches the atm and inserts their card --> atm then asks for a pin --> user then types in their pin --> atm displays two options, balance/withdraw --> user selects balance --> atm displays balance --> user removes card</p>
+					<p><strong>Use case for withdrawing cash:</strong> The user approaches the atm and inserts their card --> atm then asks for a pin --> user then types in their pin --> atm displays two options, balance/withdraw --> user selects withdraw --> atm displays an amount that starts at $20 and goes up or down $20 at a time --> user clicks the up button 4 times to select $100 --> user clicks withdraw --> atm dispenses money but keeps it inaccessible to the user --> user removes card --> atm makes money accessible to user and logs out of their account.</p>
+					<p><strong>Use case for incorrect pin:</strong> The user approaches the atm and inserts their card --> atm then asks for a pin --> user then types in their pin incorrectly --> atm displays “Wrong pin” --> user then types in their pin incorrectly --> atm displays “Wrong pin” --> user then types in their pin incorrectly --> atm displays “Call bank to unlock card” and no longer accepts card</p>
+
+					<h4 class="mt-5 mb-3">Reflection on Chapter 4 and Readings</h4>
+					<p>All of the articles and chapter 4 seemed to affirm the point that testing, and designing is not a one and done process. It is important to constantly revise the system throughout the entire process. Based on the article “Magical Number 7”, a human can only store 7 plus or minus 2 things at a time in their memory. This means that if we are not constantly testing and improving our system, we will not create a good system. In a case study that looked at tire pressure monitoring systems, they found that they could easily hack into these systems from 40m away. The manufacture assumed that since the network was behind the tire, it would eliminate the threat of someone tapping into the wireless network. They obviously were not testing and changing the product throughout the production. There is a process called test driven development (TDD) that is a mindset when creating a piece of software. The basic idea is to design a test and expect it to fail, then create the code to make the test pass. This idea allows every piece of code to be tested while creating to reduce the number of bugs in the software. Testing must be integrated into the core of our applications and TDD is a great way of solving some of the problems that have happened in the past.</p>
+				    
+				   
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+
+				</nav>
+				
+				
+		    </div><!--//container-->
+	    </article>
+	    
+	    
+	    <footer class="footer text-center py-2 theme-bg-dark">
+		   
+	        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+                <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+		   
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+
+    
+
+    
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script>
+    
+ 
+    
+
+</body>
+</html> 
+
